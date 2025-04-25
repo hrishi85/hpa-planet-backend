@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "connects",
+  "info": {
+    "singularName": "connect",
+    "pluralName": "connects",
+    "displayName": "Connect",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 64,
+      "minLength": 2
+    },
+    "message": {
+      "type": "string",
+      "required": true,
+      "maxLength": 500,
+      "minLength": 4
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "maxLength": 64,
+      "minLength": 5
+    }
+  }
+}

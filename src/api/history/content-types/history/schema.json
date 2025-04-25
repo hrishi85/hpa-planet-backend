@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "histories",
+  "info": {
+    "singularName": "history",
+    "pluralName": "histories",
+    "displayName": "History"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "companyHistory": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

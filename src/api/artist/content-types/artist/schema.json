@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "singularName": "artist",
+    "pluralName": "artists",
+    "displayName": "artist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "inviteId": {
+      "type": "uid",
+      "maxLength": 16,
+      "minLength": 1,
+      "private": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 16,
+      "minLength": 2
+    },
+    "lastName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 16,
+      "minLength": 2
+    },
+    "stageName": {
+      "type": "string",
+      "maxLength": 32,
+      "minLength": 2,
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "profilePic": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "birthDate": {
+      "type": "date",
+      "required": false
+    },
+    "password": {
+      "type": "password",
+      "required": false,
+      "minLength": 6,
+      "private": true
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "tracks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::track.track"
+    }
+  }
+}

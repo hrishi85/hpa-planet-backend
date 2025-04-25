@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "comment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "news": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::news.news",
+      "inversedBy": "comments"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 64,
+      "minLength": 5
+    },
+    "comment": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500,
+      "minLength": 5
+    },
+    "userId": {
+      "type": "string",
+      "maxLength": 64,
+      "minLength": 10
+    }
+  }
+}
