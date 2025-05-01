@@ -25,6 +25,7 @@ export const theme = {
         buttonNeutral0: '#000000',
         buttonPrimary500: '#D6B55E',
         buttonPrimary600: '#D6B55E',
+        // temporary change
 
         // Optional: more explicit button overrides
     },
