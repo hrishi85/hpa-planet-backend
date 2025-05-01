@@ -677,9 +677,7 @@ export interface ApiInviteInvite extends Struct.CollectionTypeSchema {
         maxLength: 17;
         minLength: 16;
       }>;
-    inviteStatus: Schema.Attribute.Enumeration<
-      ['pending', 'accepted', 'expired']
-    > &
+    inviteStatus: Schema.Attribute.Enumeration<['pending', 'used']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'pending'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

@@ -28,8 +28,7 @@
       "type": "enumeration",
       "enum": [
         "pending",
-        "accepted",
-        "expired"
+        "used"
       ],
       "default": "pending",
       "required": true
