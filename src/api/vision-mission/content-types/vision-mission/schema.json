@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "vision_missions",
+  "info": {
+    "singularName": "vision-mission",
+    "pluralName": "vision-missions",
+    "displayName": "Vision Mission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "visionMission": {
+      "type": "blocks",
+      "required": true
+    },
+    "banner": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

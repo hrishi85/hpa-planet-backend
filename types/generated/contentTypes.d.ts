@@ -855,6 +855,36 @@ export interface ApiTrackTrack extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiVisionMissionVisionMission extends Struct.SingleTypeSchema {
+  collectionName: 'vision_missions';
+  info: {
+    description: '';
+    displayName: 'Vision Mission';
+    pluralName: 'vision-missions';
+    singularName: 'vision-mission';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vision-mission.vision-mission'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    visionMission: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1376,6 +1406,7 @@ declare module '@strapi/strapi' {
       'api::service.service': ApiServiceService;
       'api::tag.tag': ApiTagTag;
       'api::track.track': ApiTrackTrack;
+      'api::vision-mission.vision-mission': ApiVisionMissionVisionMission;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
